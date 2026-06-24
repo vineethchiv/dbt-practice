@@ -19,7 +19,7 @@ models:
       - name: order_date
         description: Date the order was placed.
       - name: status
-        description: Current order lifecycle status.
+        description: "{{doc('order_status')}}"
         data_tests:
           - accepted_values:
               arguments:
