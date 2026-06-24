@@ -13,16 +13,20 @@ sources:
       loaded_at_field: _etl_loaded_at
     tables:
       - name: customers
+        description: The grain of this table is one unique customer per row
         columns:
           - name: id
+            description: Primary Key for the customers table
             data_tests:
               - unique
               - not_null
         config:
           freshness: null
       - name: orders
+        description: The grain of this table is one order per row
         columns:
           - name: id
+            description: Primary Key for the orders table
             data_tests:
               - unique
               - not_null
